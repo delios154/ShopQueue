@@ -1,0 +1,39 @@
+{
+  "name": "shopqueue",
+  "version": "1.0.0",
+  "description": "Smart Booking & Customer Queue System for Small Shops",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon server/index.js",
+    "client:dev": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "install:all": "npm install && cd client && npm install",
+    "test": "jest",
+    "lint": "eslint server client/src --ext .js,.jsx"
+  },
+  "keywords": ["queue", "booking", "saas", "shop", "appointment"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "socket.io": "^4.7.2",
+    "twilio": "^4.15.0",
+    "node-cron": "^3.0.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.1",
+    "jest": "^29.6.4",
+    "eslint": "^8.47.0"
+  }
+}
